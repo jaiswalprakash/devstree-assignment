@@ -38,6 +38,10 @@ const Constant = {
       FETCHED: "Data Fatched Successfully",
     },
   },
+  JWT: {
+    SECRET: "dev@prakash",
+    TOKEN_TIMEOUT: "12h",
+  },
 };
 
 module.exports = Constant;

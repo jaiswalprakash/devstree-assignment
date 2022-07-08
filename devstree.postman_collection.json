@@ -1,0 +1,135 @@
+{
+  "info": {
+    "_postman_id": "61d55f26-7e38-43ea-a027-8c9572100025",
+    "name": "devstree",
+    "schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+    "_exporter_id": "8870638"
+  },
+  "item": [
+    {
+      "name": "users Copy",
+      "item": [
+        {
+          "name": "Add",
+          "request": {
+            "auth": {
+              "type": "noauth"
+            },
+            "method": "POST",
+            "header": [],
+            "url": {
+              "raw": "http://localhost:3000/users",
+              "protocol": "http",
+              "host": ["localhost"],
+              "port": "3000",
+              "path": ["users"]
+            }
+          },
+          "response": []
+        },
+        {
+          "name": "List",
+          "request": {
+            "auth": {
+              "type": "bearer",
+              "bearer": [
+                {
+                  "key": "token",
+                  "value": "{{bearer_token}}",
+                  "type": "string"
+                }
+              ]
+            },
+            "method": "GET",
+            "header": [],
+            "url": {
+              "raw": "http://localhost:3000/users",
+              "protocol": "http",
+              "host": ["localhost"],
+              "port": "3000",
+              "path": ["users"]
+            }
+          },
+          "response": []
+        },
+        {
+          "name": "usersDetail",
+          "request": {
+            "auth": {
+              "type": "bearer",
+              "bearer": [
+                {
+                  "key": "token",
+                  "value": "{{bearer_token}}",
+                  "type": "string"
+                }
+              ]
+            },
+            "method": "GET",
+            "header": [],
+            "url": {
+              "raw": "http://localhost:3000/users/62c7f782c4f923b9bbd8b2d9",
+              "protocol": "http",
+              "host": ["localhost"],
+              "port": "3000",
+              "path": ["users", "62c7f782c4f923b9bbd8b2d9"]
+            }
+          },
+          "response": []
+        }
+      ]
+    },
+    {
+      "name": "auth Copy",
+      "item": [
+        {
+          "name": "login",
+          "request": {
+            "method": "POST",
+            "header": [],
+            "body": {
+              "mode": "raw",
+              "raw": "{\r\n    \"email\" : \"prakash@gmail.com\",\r\n    \"password\" : \"asdf123\"\r\n}",
+              "options": {
+                "raw": {
+                  "language": "json"
+                }
+              }
+            },
+            "url": {
+              "raw": "http://localhost:3000/auth/signIn",
+              "protocol": "http",
+              "host": ["localhost"],
+              "port": "3000",
+              "path": ["auth", "signIn"]
+            }
+          },
+          "response": []
+        }
+      ]
+    }
+  ],
+  "event": [
+    {
+      "listen": "prerequest",
+      "script": {
+        "type": "text/javascript",
+        "exec": [""]
+      }
+    },
+    {
+      "listen": "test",
+      "script": {
+        "type": "text/javascript",
+        "exec": [""]
+      }
+    }
+  ],
+  "variable": [
+    {
+      "key": "bearer_token",
+      "value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJfaWQiOiI2MmM3Zjc4MmM0ZjkyM2I5YmJkOGIyZDkiLCJlbWFpbCI6InByYWthc2hAZ21haWwuY29tIiwiZnVsbE5hbWUiOiJwcmFrYXNoIGphaXN3YWwiLCJpYXQiOjE2NTcyNzU4NDEsImV4cCI6MTY1NzMxOTA0MX0.pujdgPznIG1kjfFjHAYNZQ0MANl0wc8epjgVTaYV3CQ",
+      "type": "string"
+    }
+  ]
+}
